@@ -10,11 +10,14 @@ part 'active_todo_count_state.dart';
 
 class ActiveTodoCountCubit extends Cubit<ActiveTodoCountState> {
   late final StreamSubscription todoListSubscription;
+
+  final int initialActiveTodoCount;
   final TodoListCubit todoListCubit;
 
   ActiveTodoCountCubit({
     required this.todoListCubit,
-  }) : super(ActiveTodoCountState.initial()) {
+    required this.initialActiveTodoCount,
+  }) : super(ActiveTodoCountState(activeTodoCount: initialActiveTodoCount)) {
     todoListSubscription =
         todoListCubit.stream.listen((TodoListState todoListState) {
       print('todoListState: $todoListState');
