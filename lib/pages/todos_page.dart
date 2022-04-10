@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_cubit/widgets/search_and_filter_todo.dart';
+import 'package:todo_cubit/widgets/show_todos.dart';
 
 import '../widgets/create_todo.dart';
 import '../widgets/todo_header.dart';
@@ -23,6 +24,7 @@ class TodosPage extends StatelessWidget {
                   height: 20.0,
                 ),
                 SearchAndFilterTodo(),
+                ShowTodos(),
               ],
             ),
           ),
