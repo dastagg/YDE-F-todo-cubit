@@ -16,7 +16,7 @@ class ActiveTodoCountCubit extends Cubit<ActiveTodoCountState> {
 
   ActiveTodoCountCubit({
     required this.todoListCubit,
-    required this.initialActiveTodoCount,
+    required this.initialActiveTodoCount, // added this for hardcoded todos
   }) : super(ActiveTodoCountState(activeTodoCount: initialActiveTodoCount)) {
     todoListSubscription =
         todoListCubit.stream.listen((TodoListState todoListState) {
